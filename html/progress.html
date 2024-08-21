@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nikitina-Korkunova-Kan">
+    <title>Прогрессбар в дизайн-системе Baggins-coffee</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li class="menu_logo" style="color: var(--white);">
+                <a href="../index.html">
+                    <h3 style="margin-bottom: 0;">Baggins coffee</h3>
+                </a>
+            </li>
+            <a href="../index.html">
+                <li class="menu_item title2">Главная</li>
+            </a>
+
+            <!--раскрывающийся пукт меню-->
+            <details class="title2">
+                <summary>
+                    <li class="menu_item title2">
+                        Стили
+                    </li>
+                </summary>
+                <a href="colors.html">
+                    <li class="submenu_item">Цвета</li>
+                </a>
+                <a href="font.html">
+                    <li class="submenu_item">Типографика</li>
+                </a>
+                <a href="grids.html">
+                    <li class="submenu_item">Сетка</li>
+                </a>
+            </details>
+
+            <details class="title2" open>
+                <summary>
+                    <li class="menu_item title2">
+                        Компоненты
+                    </li>
+                </summary>
+                <a href="buttons.html">
+                    <li class="submenu_item">Кнопки</li>
+                </a>
+                <a href="checkboxes.html">
+                    <li class="submenu_item">Чекбоксы</li>
+                </a>
+                <a href="inputs.html">
+                    <li class="submenu_item">Текстовые поля</li>
+                </a>
+                <a href="chips.html">
+                    <li class="submenu_item">Фишки</li>
+                </a>
+                <a href="menus.html">
+                    <li class="submenu_item">Меню</li>
+                </a>
+                <a href="#">
+                    <li class="submenu_item active">Прогресс</li>
+                </a>
+                <a href="switches.html">
+                    <li class="submenu_item">Свитчи</li>
+                </a>
+                <a href="sliders.html">
+                    <li class="submenu_item">Слайдер</li>
+                </a>
+                <a href="cards.html">
+                    <li class="submenu_item">Карточка</li>
+                </a>
+            </details>
+            <a href="poly.html">
+                <li class="menu_item title2">Полиграфия</li>
+            </a>
+        </ul>
+    </nav>
+
+	<main>
+		<section class="header">
+			<h1>Прогресс</h1>
+		</section>
+
+        <div class="chapter">
+            <secion class="text_container" style="margin-bottom: 0;">
+                <p class="body1">Компонент, предназначенный для уведомления пользователя</p>
+                <ul>
+                    <li class="body1">в&nbsp;режиме реального времени о&nbsp;ходе процесса&nbsp;&mdash; например, загрузки или приготовления заказа</li>
+                    <li class="body1">об&nbsp;уже выполненном числе из&nbsp;необходимых шагов&nbsp;&mdash; например, при оформлении заказа или заполнения анкеты при регистрации</li>
+                </ul>
+            </secion>
+        </div>
+
+		<div class="chapter">
+            <section class ="text_container">
+		    	<h2>Анатомия</h2>
+			    <p class="body1">Индикатор прогресса представляет собой кольцо серого оттенка из&nbsp;монохромной палитры дизайн системы, вписанного в&nbsp;квадрат белого цвета. Квадрат имеет длину стороны 48&nbsp;пикселей, кольцо расположено по&nbsp;центру квадрата с&nbsp;отступами в&nbsp;4&nbsp;пикселя с&nbsp;каждой из&nbsp;сторон (по&nbsp;горизонтали и&nbsp;вертикали).</p>
+			    <p class="body1" style="margin-bottom: 0">При необходимости изменения размеров рекомендуется сохранить соотношения всех составных частей индикатора прогресса.</p>
+			</section>
+			<div class="auto_wrapper_row"><img class="chapter_img" src="../content/Progress.avif" alt=""></div>
+		</div>
+		
+		<div class="chapter">
+            <section class ="text_container">
+		    	<h3>Типы</h3>
+		    	<p class="body1">Предусмотрено два типа индикатора прогресса.</p>
+		    	<p class="body1">Индикатор, уведомляющий о&nbsp;выполненных шагах при заполнении, изменяется при выполнении каждого из&nbsp;шагов. В&nbsp;самом начале (не&nbsp;выполнено ни&nbsp;одного шага) кольцо индикатора белое визуально он&nbsp;не&nbsp;заметен), а&nbsp;далее окрашивается в&nbsp;серый по&nbsp;часовой стрелке, причем величина заполненности пропорциональна соотношению числа выполненных шагов к&nbsp;общему их&nbsp;числу. Например, при выполнении одного шага из&nbsp;четырех окрасится четверть кольца.</p>
+                <p class="body1" style="margin-bottom: 0">Индикатор, уведомляющий о ходе процесса, визуально не изменяется во времени. Кольцо индикатора сразу окрашено в серый цвет, при выполнении процесса вращается по часовой стрелке.</p>
+		    </section>
+			<div class="auto_wrapper_row">
+                <table class="table_component table_button">
+                <thead>
+                    <tr>
+                        <th class="body2">Компонент</th>
+                        <th class="body2">Тип</th>
+                        <th class="body2">Высота</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="body2">
+                            <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M24.5 6C28.0601 6 31.5402 7.05568 34.5003 9.03355C37.4604 11.0114 39.7675 13.8226 41.1298 17.1117C42.4922 20.4008 42.8487 24.02 42.1541 27.5116C41.4596 31.0033 39.7453 34.2106 37.2279 36.7279C34.7106 39.2453 31.5033 40.9596 28.0116 41.6541C24.52 42.3487 20.9008 41.9922 17.6117 40.6298C14.3226 39.2675 11.5114 36.9603 9.53355 34.0003C7.55568 31.0402 6.5 27.5601 6.5 24H10.46C10.46 26.7768 11.2834 29.4913 12.8262 31.8002C14.3689 34.1091 16.5617 35.9086 19.1271 36.9713C21.6926 38.0339 24.5156 38.312 27.2391 37.7702C29.9626 37.2285 32.4642 35.8913 34.4278 33.9278C36.3913 31.9642 37.7285 29.4626 38.2702 26.7391C38.812 24.0156 38.5339 21.1926 37.4713 18.6271C36.4086 16.0617 34.6091 13.8689 32.3002 12.3262C29.9913 10.7834 27.2768 9.96 24.5 9.96V6Z" fill="var(--transparent-25)"/>
+							</svg>
+                        </td>
+						<td class="body2">Заполнение</td>
+						<td class="body2">48 px</td>
+                    </tr>
+                    <tr>
+                        <td class="body2">
+							<svg id="circular_progress_spin" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M24.5 6C28.0601 6 31.5402 7.05568 34.5003 9.03355C37.4604 11.0114 39.7675 13.8226 41.1298 17.1117C42.4922 20.4008 42.8487 24.02 42.1541 27.5116C41.4596 31.0033 39.7453 34.2106 37.2279 36.7279C34.7106 39.2453 31.5033 40.9596 28.0116 41.6541C24.52 42.3487 20.9008 41.9922 17.6117 40.6298C14.3226 39.2675 11.5114 36.9603 9.53355 34.0003C7.55568 31.0402 6.5 27.5601 6.5 24H10.46C10.46 26.7768 11.2834 29.4913 12.8262 31.8002C14.3689 34.1091 16.5617 35.9086 19.1271 36.9713C21.6926 38.0339 24.5156 38.312 27.2391 37.7702C29.9626 37.2285 32.4642 35.8913 34.4278 33.9278C36.3913 31.9642 37.7285 29.4626 38.2702 26.7391C38.812 24.0156 38.5339 21.1926 37.4713 18.6271C36.4086 16.0617 34.6091 13.8689 32.3002 12.3262C29.9913 10.7834 27.2768 9.96 24.5 9.96V6Z" fill="var(--transparent-25)"/>
+							</svg>
+								</td>
+						<td class="body2">Индикатор</td>
+						<td class="body2">48 px</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+	</main>
+</body>
+
+</html> 

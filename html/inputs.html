@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nikitina-Korkunova-Kan">
+    <title>Текстовые поля в дизайн-системе Baggins-coffee</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li class="menu_logo" style="color: var(--white);">
+                <a href="../index.html">
+                    <h3 style="margin-bottom: 0;">Baggins coffee</h3>
+                </a>
+            </li>
+            <a href="../index.html">
+                <li class="menu_item title2">Главная</li>
+            </a>
+
+            <!--раскрывающийся пукт меню-->
+            <details class="title2">
+                <summary>
+                    <li class="menu_item title2">
+                        Стили
+                    </li>
+                </summary>
+                <a href="colors.html">
+                    <li class="submenu_item">Цвета</li>
+                </a>
+                <a href="font.html">
+                    <li class="submenu_item">Типографика</li>
+                </a>
+                <a href="grids.html">
+                    <li class="submenu_item">Сетка</li>
+                </a>
+            </details>
+
+            <details class="title2" open>
+                <summary>
+                    <li class="menu_item title2">
+                        Компоненты
+                    </li>
+                </summary>
+                <a href="buttons.html">
+                    <li class="submenu_item">Кнопки</li>
+                </a>
+                <a href="checkboxes.html">
+                    <li class="submenu_item">Чекбоксы</li>
+                </a>
+                <a href="#">
+                    <li class="submenu_item active">Текстовые поля</li>
+                </a>
+                <a href="chips.html">
+                    <li class="submenu_item">Фишки</li>
+                </a>
+                <a href="menus.html">
+                    <li class="submenu_item">Меню</li>
+                </a>
+                <a href="progress.html">
+                    <li class="submenu_item">Прогресс</li>
+                </a>
+                <a href="switches.html">
+                    <li class="submenu_item">Свитчи</li>
+                </a>
+                <a href="sliders.html">
+                    <li class="submenu_item">Слайдер</li>
+                </a>
+                <a href="cards.html">
+                    <li class="submenu_item">Карточка</li>
+                </a>
+            </details>
+            <a href="poly.html">
+                <li class="menu_item title2">Полиграфия</li>
+            </a>
+        </ul>
+    </nav>
+
+	<main>
+		<section class="header">
+			<h1>Текстовые поля</h1>
+		</section>
+
+        <div class="chapter">
+            <section class="text_container" style="margin-bottom: 0;">
+                <p class="body1">Компоненты, предназначенные для ввода и&nbsp;редактирования текстовых данных в&nbsp;случаях, когда не&nbsp;могут быть предложены готовые наборы вариантов (пунктов) для выбора. Могут быть использованы для заполнения данных о&nbsp;клиенте или сотруднике, ввода комментариев к&nbsp;заказам.</p>
+                <p class="body1">Вне зависимости от&nbsp;состояния (заполненности), текстовое поле однозначно сигнализирует о&nbsp;том, для заполнения какой информации оно предназначено&nbsp;&mdash; заголовок поля виден пользователю всегда.</p>
+                <p class="body1" style="margin-bottom: 0;">Под полем может быть размещен текстовый фрагмент с&nbsp;пояснением о&nbsp;том, какие данные нужно ввести в&nbsp;поле, а&nbsp;также информацией об&nbsp;ошибке и&nbsp;ее&nbsp;исправлении (в&nbsp;случае возникновения).</p>
+            </section>
+        </div>
+
+		<div class="chapter">
+            <section class ="text_container">
+		    	<h2>Анатомия</h2>
+			    <p class="body1">Поле ввода состоит из&nbsp;тела&nbsp;&mdash; прямоугольника с&nbsp;закругленными углами, заголовка (рекомендуется выполнить в&nbsp;основном красном цвете) и&nbsp;текста-подсказки (должен быть выполнен в&nbsp;более светлом оттенке черного, чтобы заполненное поле визуально отличалось от&nbsp;пустого). Допускается также использование иконок (не&nbsp;более двух), гармонирующих с&nbsp;заголовком поля.</p>
+                <p class="body1">Заголовок, текст-подсказки и&nbsp;иконки размещаются на&nbsp;теле поля так, чтобы отступы от&nbsp;краев были равными с&nbsp;двух сторон (по&nbsp;ширине&nbsp;&mdash; 16&nbsp;пикселей, по&nbsp;высоте&nbsp;&mdash; 8&nbsp;пикселей). Заголовок всегда размещается над текстом-подсказкой. Расстояние между иконкой и&nbsp;текстовой частью не&nbsp;зависит от&nbsp;размера поля, всегда составляет 8&nbsp;пикселей.</p>
+                <p class="body1" style="margin-bottom: 0;">Длина поля ввода может варьироваться в&nbsp;зависимости от&nbsp;длины текстовой надписи и&nbsp;наличия иконки, однако должна всегда быть кратна размеру микромодуля (4&nbsp;пикселя). Высота поля не&nbsp;варьируется при изменении длины текста, соответствует значению, обозначенному ниже. Допускается изменение высоты поля только в&nbsp;случаях, когда указанные размеры не&nbsp;гармонично смотрятся на&nbsp;экране маленького размера.</p>
+			</section>
+			<div class="auto_wrapper_row"><img src="../content/Inputs.avif" alt="Анатомия кнопки. Высота - 48px, ширина зависит от размера текста внутри кнопки+боковые отступы (padding) по 56px каждый. Расстояние между иконкой и текстом - 8px."></div>
+		</div>
+		
+		<div class="chapter">
+            <section class ="text_container">
+		    	<h3>Типы</h3> 	
+		    	<p class="body1">Поля ввода могут визуально варьироваться в&nbsp;зависимости от&nbsp;наличия и&nbsp;числа иконок&nbsp;&mdash; всего предусмотрено 4&nbsp;типа. Размер иконок всегда одинаковый.</p>
+			    <p class="body1" style="margin-bottom: 0">Допускается использование одной или двух иконок. Одиночная иконка может быть размещена как слева, так и&nbsp;справа от&nbsp;текстовой части (соблюдение воздуха обязательно в&nbsp;обоих случаях). Если иконки две, они размещаются по&nbsp;одной с&nbsp;разных краев поля с&nbsp;соблюдением пропорций воздуха).</p>
+		    </section>
+			<div class="auto_wrapper_row">
+                <table class="table_component table_button">
+                <thead>
+                    <tr>
+                        <th class="body2">Компонент</th>
+                        <th class="body2">Иконка</th>
+                        <th class="body2">Иконка</th>
+						<th class="body2">Радиус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="body2">
+                            <img src="../content/Input.avif" alt="" style="width: 20em;">
+                        </td>
+						<td class="body2">Слева</td>
+						<td class="body2">56 px</td>
+						<td class="body2">12px</td>
+                    </tr>
+                    <tr>
+                        <td class="body2">
+                            <img src="../content/Input-1.avif" alt="" style="width: 20em;">
+                        </td>
+						<td class="body2">Справа</td>
+						<td class="body2">56 px</td>
+						<td class="body2">12px</td>
+                    </tr>
+                    <tr>
+                        <td class="body2">
+                            <img src="../content/Input-2.avif" alt="" style="width: 20em;">
+                        </td>
+						<td class="body2">Слева и справа</td>
+						<td class="body2">56 px</td>
+						<td class="body2">12px</td>
+                    </tr>
+					<tr>
+                        <td class="body2">
+                            <img src="../content/Input-3.avif" alt="" style="width: 20em;">
+                        </td>
+						<td class="body2">Нет</td>
+						<td class="body2">56 px</td>
+						<td class="body2">12px</td>
+                    </tr>
+                </tbody>
+            	</table>
+            </div>
+        </div>
+
+		<div class="chapter" style="margin-bottom: 0;">
+            <section class="text_container">
+			    <h3>Правила</h3>
+                <p class="body1" style="margin-bottom: 0;">Ниже приведены наши основные рекомендации по&nbsp;оформлению полей ввода (текстовых полей)</p>
+    		</section>
+             <div class="auto_wrapper_row">
+                <figure class="card">
+                    <img src="../content/Input_good.avif" alt="Поле ввода с заголовком-подсказкой">
+                    <figcaption class="title2 good">Можно</figcaption>
+                    <p class="body1" style="margin-bottom: 0">Обязательно, чтобы заголовок поля был виден всегда, в&nbsp;том числе при вводе данных. Это позволит пользователю четко понимать, какую информацию требуется ввести в&nbsp;данное поле</p>
+                </figure>
+                <figure class="card">
+                    <img src="../content/Input_bad_label.avif" alt="Поле ввода без заголовка">
+                    <figcaption class="title2 bad">Нельзя</figcaption>
+                    <p class="body1" style="margin-bottom: 0">Не&nbsp;допускается исчезновение из&nbsp;видимости заголовка поля при вводе данных в&nbsp;поле</p>
+                </figure>
+            </div>
+			<div class="auto_wrapper_row">
+                <figure class="card">
+                    <img src="../content/Input_good_error.avif" alt="Поле вода с сообщением об ошибке с пояснениями">
+                    <figcaption class="title2 good">Можно</figcaption>
+                    <p class="body1" style="margin-bottom: 0">Рекомендуется в&nbsp;случае возникновения ошибки при вводе данных в&nbsp;поле выводить причины ее&nbsp;возникновения и\или рекомендации по&nbsp;ее&nbsp;исправлению</p>
+                </figure>
+                <figure class="card">
+                    <img src="../content/Input_bad_error.avif" alt="Поле вода с сообщением об ошибке без пояснений">
+                    <figcaption class="title2 bad">Нельзя</figcaption>
+                    <p class="body1" style="margin-bottom: 0">Не&nbsp;рекомендуется просто выводить сообщение о&nbsp;факте возникновения ошибки</p>
+                </figure>
+            </div>              
+        </div>
+
+	</main>
+</body>
+
+</html> 

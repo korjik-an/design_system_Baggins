@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nikitina-Korkunova-Kan">
+    <title>Типографика в дизайн-системе Baggins-coffee</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li class="menu_logo" style="color: var(--white);">
+                <a href="../index.html">
+                    <h3 style="margin-bottom: 0;">Baggins coffee</h3>
+                </a>
+            </li>
+            <a href="../index.html">
+                <li class="menu_item title2">Главная</li>
+            </a>
+
+            <!--раскрывающийся пукт меню-->
+            <details class="title2" open>
+                <summary>
+                    <li class="menu_item title2">
+                        Стили
+                    </li>
+                </summary>
+                <a href="colors.html">
+                    <li class="submenu_item">Цвета</li>
+                </a>
+                <a href="#">
+                    <li class="submenu_item active">Типографика</li>
+                </a>
+                <a href="grids.html">
+                    <li class="submenu_item">Сетка</li>
+                </a>
+            </details>
+
+            <details class="title2">
+                <summary>
+                    <li class="menu_item title2">
+                        Компоненты
+                    </li>
+                </summary>
+                <a href="buttons.html">
+                    <li class="submenu_item">Кнопки</li>
+                </a>
+                <a href="checkboxes.html">
+                    <li class="submenu_item">Чекбоксы</li>
+                </a>
+                <a href="inputs.html">
+                    <li class="submenu_item">Текстовые поля</li>
+                </a>
+                <a href="chips.html">
+                    <li class="submenu_item">Фишки</li>
+                </a>
+                <a href="menus.html">
+                    <li class="submenu_item">Меню</li>
+                </a>
+                <a href="progress.html">
+                    <li class="submenu_item">Прогресс</li>
+                </a>
+                <a href="switches.html">
+                    <li class="submenu_item">Свитчи</li>
+                </a>
+                <a href="sliders.html">
+                    <li class="submenu_item">Слайдер</li>
+                </a>
+                <a href="cards.html">
+                    <li class="submenu_item">Карточка</li>
+                </a>
+            </details>
+            <a href="poly.html">
+                <li class="menu_item title2">Полиграфия</li>
+            </a>
+        </ul>
+    </nav>
+
+
+	<main>
+		<section class="header">
+			<h1>Типографика</h1>
+		</section>
+		<div class="chapter">
+            <section class ="text_container">
+	    		<h2>Open Sans</h2>
+		    	<p class="body1">Используется семейство шрифтов Open Sans для всех текстовых фрагментов, заголовков и&nbsp;подзаголовков всех уровней. Шрифт без засечек, легко читается, имеет много вариантов начертаний.</p>
+		    	<p class="body1" style="margin-bottom: 0">Рекомендуется использовать следующие начертания: Semibold, Regular. Не&nbsp;допускается использование любых начертаний Italic.</p>
+		    </section>
+        </div>
+		
+		<div class="chapter">
+            <section class ="text_container">
+    			<h3>Заголовки</h3> 	
+    			<p class="body1">Используются для размещения ключевой для понимания информации в&nbsp;рамках экрана: названия раздела, блока или продукта.</p>
+    			<p class="body1">Необходимо соблюдение баланса лаконичности заголовка и&nbsp;полноты передаваемой информации. Рекомендуется по&nbsp;возможности избегать общих и&nbsp;клишированных слов и&nbsp;выражений. При наличии важных для осуществления поиска деталей оптимально отразить их&nbsp;в&nbsp;заголовке&nbsp;&mdash; это также будет полезно с&nbsp;точки зрения работы SEO.</p>
+    			<p class="body1">Рекомендуется использование заголовков трёх уровней, для каждого из&nbsp;которых ниже указан оптимальный кегль. Необходимо соблюдать иерархию заголовков&nbsp;&mdash; так, например не&nbsp;допускается применять для заголовков низших уровней больший кегль, чем для стоящих выше иерархически.</p>
+	    		<p class="body1" style="margin-bottom: 0">Важно! На&nbsp;каждой странице должен быть только один заголовок первого уровня (H1), не&nbsp;более трех заголовков второго уровня (H2). Жестких ограничений по&nbsp;числу заголовков третьего уровня (H3) не&nbsp;предусмотрено.</p>
+		    </section>
+		<!--сюда таблица-->
+		<table class = "table_component">
+			<thead>
+				<tr>
+					<th class="body2">Компонент</th>
+					<th class="body2">Кегль</th>
+					<th class="body2">Строка</th>
+					<th class="body2">Начертание</th>
+					<th class="body2">Кернинг</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><h1>Заголовок 1</h1></td>
+					<td class="body2">32 px</td>
+					<td class="body2">40 px</td>
+					<td class="body2">Semibold</td>
+					<td class="body2">0 px</td>
+				</tr>
+				<tr>
+					<td><h2 style = "margin-bottom: 0;">Заголовок 2</h2></td>
+					<td class="body2">28 px</td>
+					<td class="body2">36 px</td>
+					<td class="body2">Semibold</td>
+					<td class="body2">0 px</td>
+				</tr>
+				<tr>
+					<td><h3 style = "margin-bottom: 0;">Заголовок 3</h3></td>
+					<td class="body2">24 px</td>
+					<td class="body2">32 px</td>
+					<td class="body2">Semibold</td>
+					<td class="body2">0 px</td>
+				</tr>
+			</tbody>
+		</table>
+        </div>
+
+		<div class="chapter">
+            <section class="text_container">
+    			<h3>Подзаголовки</h3>
+    			<p class="body1">Используются для размещения более подробной (тем не&nbsp;менее краткой) информации в&nbsp;рамках более мелких составных частей страницы.</p>
+            	<p class="body1">Необходимо соблюдение баланса лаконичности подзаголовка и&nbsp;полноты передаваемой информации. Должны быть отражены ключевые аспекты, позволяющие пользователю понять примерное содержание идущего в&nbsp;данной части основного текста, принять решение о&nbsp;том, необходимо&nbsp;ли подробное ознакомление с&nbsp;ним.</p>
+    			<p class="body1" style="margin-bottom: 0">Рекомендуется использование подзаголовков трёх уровней, для каждого из&nbsp;которых ниже указан оптимальный кегль. Необходимо соблюдать иерархию заголовков&nbsp;&mdash; так, например не&nbsp;допускается применять для заголовков низших уровней больший кегль, чем для стоящих выше иерархически.</p>
+	    	</section>
+        <!--сюда таблица-->
+		<table class = "table_component">
+			<thead>
+				<tr>
+					<th class="body2">Компонент</th>
+					<th class="body2">Кегль</th>
+					<th class="body2">Строка</th>
+					<th class="body2">Начертание</th>
+					<th class="body2">Кернинг</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="title1" style = "margin-bottom: 0;">Подзаголовок 1</td>
+					<td class="body2">22 px</td>
+					<td class="body2">28 px</td>
+					<td class="body2">Regular</td>
+					<td class="body2">0 px</td>
+				</tr>
+				<tr>
+					<td class="title2" style = "margin-bottom: 0;">Подзаголовок 2</td>
+					<td class="body2">16 px</td>
+					<td class="body2">24 px</td>
+					<td class="body2">Semibold</td>
+					<td class="body2">0.15 px</td>
+				</tr>
+				<tr>
+					<td class="title3" style = "margin-bottom: 0;">Подзаголовок 3</td>
+					<td class="body2">14 px</td>
+					<td class="body2">20 px</td>
+					<td class="body2">Semibold</td>
+					<td class="body2">0.1 px</td>
+				</tr>
+			</tbody>
+		</table>
+        </div>
+
+        <div class="chapter">
+            <section class="text_container">
+    			<h3>Текст</h3>
+				<p class="body1">Текстовые фрагменты, используемые для подробного, детального изложения информации&nbsp;&mdash; описаний, пояснений.</p>
+				<p class="body1">Для основного текста нет четких ограничений по&nbsp;длине, однако также рекомендуется соблюдать баланс лаконичности и&nbsp;полноты передаваемой информации. Не&nbsp;рекомендуется сопровождать текстовые фрагменты чрезмерными подробностями (если некоторые детали можно убрать без потери смысла ключевых аспектов текста&nbsp;&mdash; оптимально будет это сделать). Также рекомендуется избегать сложных для понимания грамматических конструкций и&nbsp;оборотов речи.</p>
+				<p class="body1" style="margin-bottom: 0;">Предлагается использовать основной текст трёх уровней, для каждого из&nbsp;которых ниже указан оптимальный кегль.</p>
+    		</section>	
+		<table class = "table_component">
+			<thead>
+				<tr>
+					<th class="body2">Компонент</th>
+					<th class="body2">Кегль</th>
+					<th class="body2">Строка</th>
+					<th class="body2">Начертание</th>
+					<th class="body2">Кернинг</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="body1" style = "margin-bottom: 0;">Текст 1</td>
+					<td class="body2">16 px</td>
+					<td class="body2">24 px</td>
+					<td class="body2">Regular</td>
+					<td class="body2">0.5 px</td>
+				</tr>
+				<tr>
+					<td class="body2" style = "margin-bottom: 0;">Текст 2</td>
+					<td class="body2">14 px</td>
+					<td class="body2">20 px</td>
+					<td class="body2">Regular</td>
+					<td class="body2">0.25 px</td>
+				</tr>
+				<tr>
+					<td class="body3" style = "margin-bottom: 0;">Текст 3</td>
+					<td class="body2">12 px</td>
+					<td class="body2">16 px</td>
+					<td class="body2">Regular</td>
+					<td class="body2">0.4 px</td>
+				</tr>
+			</tbody>
+		</table>
+        </div>
+		</div>
+
+	</main>
+</body>
+
+</html> 

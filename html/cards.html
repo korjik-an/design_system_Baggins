@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nikitina-Korkunova-Kan">
+    <title>Карточки в дизайн-системе Baggins-coffee</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li class="menu_logo" style="color: var(--white);">
+                <a href="../index.html">
+                    <h3 style="margin-bottom: 0;">Baggins coffee</h3>
+                </a>
+            </li>
+            <a href="../index.html">
+                <li class="menu_item title2">Главная</li>
+            </a>
+
+            <!--раскрывающийся пукт меню-->
+            <details class="title2">
+                <summary>
+                    <li class="menu_item title2">
+                        Стили
+                    </li>
+                </summary>
+                <a href="colors.html">
+                    <li class="submenu_item">Цвета</li>
+                </a>
+                <a href="font.html">
+                    <li class="submenu_item">Типографика</li>
+                </a>
+                <a href="grids.html">
+                    <li class="submenu_item">Сетка</li>
+                </a>
+            </details>
+
+            <details class="title2" open>
+                <summary>
+                    <li class="menu_item title2">
+                        Компоненты
+                    </li>
+                </summary>
+                <a href="buttons.html">
+                    <li class="submenu_item">Кнопки</li>
+                </a>
+                <a href="checkboxes.html">
+                    <li class="submenu_item">Чекбоксы</li>
+                </a>
+                <a href="inputs.html">
+                    <li class="submenu_item">Текстовые поля</li>
+                </a>
+                <a href="chips.html">
+                    <li class="submenu_item">Фишки</li>
+                </a>
+                <a href="menus.html">
+                    <li class="submenu_item">Меню</li>
+                </a>
+                <a href="progress.html">
+                    <li class="submenu_item">Прогресс</li>
+                </a>
+                <a href="switches.html">
+                    <li class="submenu_item">Свитчи</li>
+                </a>
+                <a href="sliders.html">
+                    <li class="submenu_item">Слайдер</li>
+                </a>
+                <a href="#">
+                    <li class="submenu_item active">Карточка</li>
+                </a>
+            </details>
+            <a href="poly.html">
+                <li class="menu_item title2">Полиграфия</li>
+            </a>
+        </ul>
+    </nav>
+
+	<main>
+		<section class="header">
+			<h1>Карточка</h1>
+		</section>
+
+        <div class="chapter">
+            <section class="text_container" style="margin-bottom: 0;">
+                <p class="body1" style="margin-bottom: 0;">Компоненты, использующиеся для хранения и&nbsp;представления нескольких компонентов в&nbsp;одной секции: текст, изображение, кнопок, чипов. Позволяют пользователю сфокусироваться на&nbsp;конкретном объекте (категории), за&nbsp;небольшой промежуток времени более подробно ознакомиться с&nbsp;основной информацией о&nbsp;нем&nbsp;&mdash; например, узнать состав, доступные объемы, маркеры аллергенов для товара, посмотреть его фото и&nbsp;возможность добавить его в&nbsp;корзину.</p>
+            </section>
+        </div>
+
+		<div class="chapter chapter_img">
+            <section class ="text_container">
+		    	<h2>Анатомия</h2>	
+			    <p class="body1">Карточка состоит из&nbsp;тела&nbsp;&mdash; прямоугольника с&nbsp;закругленными углами, выполненного в&nbsp;белом цвете, изображения горизонтальной ориентации с&nbsp;закругленными углами (рекомендуется соотношение сторон, приближенное к&nbsp;16:9), текстовой части, расположенной под изображением и&nbsp;дополнительных компонентов&nbsp;&mdash; кнопок, чипов, расположенных под текстом.</p>
+			    <p class="body1" style="margin-bottom: 0;">Ниже более подробно рассмотрены указанные выше составляющие карточки.</p>
+			</section>
+			<div class="auto_wrapper_row"><img src="../content/Cards.avif" alt="" style="margin-bottom: 1.5em;"></div>
+            <section class="text_container" style="margin-bottom: 0;">
+                <ol>
+                    <li class="body1">Изображение&nbsp;&mdash; фото или рисунок, визуально отражающий товар или категорию, которой посвящена карточка. Рекомендуется использовать материалы в&nbsp;едином стиле (одна или похожие фотосессии, общие черты или стиль рисовки), однако изображения должны иметь отличительные детали&nbsp;&mdash; не&nbsp;должны визуально сливаться в&nbsp;одно (в&nbsp;некий собирательный образ), так как служат для привлечения внимания пользователя, облегчения его поиска \ сканирования информации</li>
+                    <li class="body1">Информация&nbsp;&mdash; текстовый фрагмент, отражающий ключевые особенности и&nbsp;детали товара или категории. Рекомендуется соблюдать баланс лаконичности и&nbsp;полноты передаваемой информации&nbsp;&mdash; описывать только значимое для пользователя, то, что позволяет ему сформировать представление о&nbsp;самом объекте и&nbsp;том, как он&nbsp;отличается от&nbsp;других (например, состав, вкус и&nbsp;аллергены напитка)</li>
+                    <li class="body1">Действия&nbsp;&mdash; кнопки, отражающие действия, которые можно выполнить с&nbsp;объектом. Рекомендуется одну из&nbsp;кнопок (более яркую, акцентную) посвятить бизнес-ценности, а&nbsp;вторую&nbsp;&mdash; действию отмены\выхода из&nbsp;карточки. Не&nbsp;допускается добавлять более двух действий в&nbsp;рамках одной карточки</li>
+                </ol>
+            </section>
+		</div>
+
+        <div class="chapter chapter_img">
+			<div class="auto_wrapper_row"><img src="../content/Card_1.avif" alt="" style="margin-bottom: 1.5em;"></div>
+            <section class="text_container" style="margin-bottom: 0;">
+                <ol>
+                    <li class="body1">Заголовок&nbsp;&mdash; название товара или категории. Рекомендуется при формулировке опираться в&nbsp;первую очередь на&nbsp;уникальность (узнаваемость) товара\категории, но&nbsp;придерживаться лаконичности. Заголовок должен заинтересовать пользователя (он&nbsp;виден вместе с&nbsp;фото без подробного ознакомления с&nbsp;карточкой), но&nbsp;не&nbsp;перегружать его информацией</li>
+                    <li class="body1">Подзаголовок&nbsp;&mdash; классификация или краткое описание товара или категории с&nbsp;указанием важных отличительных деталей. В&nbsp;идеале должен дополнять (кратко пояснять) заголовок. Рекомендуется формулировать подзаголовок лаконично, избегать включения неключевых для первичного восприятия подробностей о&nbsp;товаре\категории</li>
+                    <li class="body1">Основной текст&nbsp;&mdash; описательная часть информационного текстового блока. Несет основную смысловую нагрузку, содержит подробности о&nbsp;товаре/категории, более детальное раскрытие заголовка и&nbsp;подзаголовка. Рекомендуется соблюдать баланс лаконичности и&nbsp;полноты передаваемой информации</li>
+                </ol>
+            </section>
+		</div>
+
+        <div class="chapter chapter_img">
+ 			<div class="auto_wrapper_row"><img src="../content/Card_2.avif" alt="" style="margin-bottom: 1.5em;"></div>
+            <section class="text_container">
+                <ol>
+                    <li class="body1">Разделитель&nbsp;&mdash; представляет собой тонкую линию оттенка серого цвета из&nbsp;монохромной палитры дизайн системы. Выполняет функцию визуального разграничения смысловой (информационной, описательной) части карточки и&nbsp;действий, которые с&nbsp;товаром\категорией можно произвести</li>
+                    <li class="body1">Действия&nbsp;&mdash; - кнопки, отражающие действия, которые можно выполнить с&nbsp;объектом (например, положить в&nbsp;корзину). Также к&nbsp;этому разделу можно отнести чипы (при их&nbsp;наличии)&nbsp;&mdash; они отражают ключевые параметры товара\категории, по&nbsp;которым можно осуществить поиск, фильтрацию</li>
+                </ol>
+            </section>
+		</div>
+
+	</main>
+</body>
+
+</html> 

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nikitina-Korkunova-Kan">
+    <title>Слайдеры в дизайн-системе Baggins-coffee</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li class="menu_logo" style="color: var(--white);">
+                <a href="../index.html">
+                    <h3 style="margin-bottom: 0;">Baggins coffee</h3>
+                </a>
+            </li>
+            <a href="../index.html">
+                <li class="menu_item title2">Главная</li>
+            </a>
+
+            <!--раскрывающийся пукт меню-->
+            <details class="title2">
+                <summary>
+                    <li class="menu_item title2">
+                        Стили
+                    </li>
+                </summary>
+                <a href="colors.html">
+                    <li class="submenu_item">Цвета</li>
+                </a>
+                <a href="font.html">
+                    <li class="submenu_item">Типографика</li>
+                </a>
+                <a href="grids.html">
+                    <li class="submenu_item">Сетка</li>
+                </a>
+            </details>
+
+            <details class="title2" open>
+                <summary>
+                    <li class="menu_item title2">
+                        Компоненты
+                    </li>
+                </summary>
+                <a href="buttons.html">
+                    <li class="submenu_item">Кнопки</li>
+                </a>
+                <a href="checkboxes.html">
+                    <li class="submenu_item">Чекбоксы</li>
+                </a>
+                <a href="inputs.html">
+                    <li class="submenu_item">Текстовые поля</li>
+                </a>
+                <a href="chips.html">
+                    <li class="submenu_item">Фишки</li>
+                </a>
+                <a href="menus.html">
+                    <li class="submenu_item">Меню</li>
+                </a>
+                <a href="progress.html">
+                    <li class="submenu_item">Прогресс</li>
+                </a>
+                <a href="switches.html">
+                    <li class="submenu_item">Свитчи</li>
+                </a>
+                <a href="#">
+                    <li class="submenu_item active" >Слайдер</li>
+                </a>
+                <a href="cards.html">
+                    <li class="submenu_item">Карточка</li>
+                </a>
+            </details>
+            <a href="poly.html">
+                <li class="menu_item title2">Полиграфия</li>
+            </a>
+        </ul>
+    </nav>
+
+	<main>
+		<section class="header">
+			<h1>Слайдеры</h1>
+		</section>
+
+        <div class="chapter">
+            <section class="text_container" style="margin-bottom: 0;">
+                <p class="body1">Компоненты, позволяющие выбрать значение или промежуток значений из&nbsp;доступного диапазона, визуально представленного в&nbsp;виде шкалы. Служит одним из&nbsp;вариантов осуществления фильтрации (например, выставление границ стоимости товара).</p>
+                <p class="body1">Выбор значения (промежутка) осуществляется передвижением ползунка по&nbsp;шкале (телу слайдера). В&nbsp;зависимости от&nbsp;того, нанесены&nbsp;ли на&nbsp;шкалу деления, значения при движении ползунка могут изменяться дискретно (деления есть) или аналогово (делений нет).</p>
+            </section>
+        </div>
+
+		<div class="chapter">
+            <section class ="text_container">
+		    	<h2>Анатомия</h2>
+			    <p class="body1">Слайдер состоит из&nbsp;тела&nbsp;&mdash; шкалы, выполненной в&nbsp;виде горизонтальной линии толщиной 4&nbsp;пикселя, ползунка&nbsp;&mdash; круга диаметром 32&nbsp;пикселя, центр которого расположен на&nbsp;шкале, поля значения&nbsp;&mdash; прямоугольника с&nbsp;закругленными краями, расположенного справа от&nbsp;тела слайдера, значения параметра&nbsp;&mdash; числа, расположенного в&nbsp;поле значения.</p>
+			    <p class="body1" style="margin-bottom: 0">ТТело слайдера изменяет цвет с&nbsp;серого (непокрытая часть) на&nbsp;основной красный (покрытая часть) при движении ползунка. Ползунок всегда выполнен в&nbsp;основном красном цвете, может двигаться только в&nbsp;пределах (вдоль) тела слайдера. Поле значения всегда выполнена в&nbsp;оттенке серого из&nbsp;монохромной палитры дизайн системы, его длина может варьироваться в&nbsp;зависимости от&nbsp;порядка значения параметра, высота всегда совпадает с&nbsp;диаметром ползунка. Значение параметра всегда выполнено в&nbsp;черном цвете, число расположено посередине поля значения с&nbsp;соблюдением равных пропорций воздуха по&nbsp;горизонтали и&nbsp;вертикали.</p>
+			</section>
+			<div class="auto_wrapper_row"><img src="../content/Sliders.avif" alt="Анатомия слайдера. Общая ширина элемента - 32px, диамерт ползунка - 16px, толщина шкалы - 4px"></div>
+		</div>
+		
+		<div class="chapter">
+            <section class ="text_container">
+		    	<h3>Типы</h3> 	
+		    	<p class="body1">Слайдеры могут визуально варьироваться в&nbsp;зависимости от&nbsp;наличия на&nbsp;теле (шкале) делений&nbsp;&mdash; всего предусмотрено 2&nbsp;типа.</p>
+                <p class="body1" style="margin-bottom: 0">При наличии делений значения, которые могут быть выбраны на&nbsp;данном слайдере, задаются заранее (соответствуют делениям). Движение ползунка осуществляется только по&nbsp;этим значениям.</p>
+		    </section>
+			<div class="auto_wrapper_row">
+                <table class="table_component table_button">
+                <thead>
+                    <tr>
+                        <th class="body2">Компонент</th>
+                        <th class="body2">Деления</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="body2">
+                            <div style="height: 2em; width: 22em;"><img class="table_elem" src="../content/Slider_70.avif" alt="Слайдер без делений"></div>
+                        </td>
+						<td class="body2">Нет</td>
+                    </tr>
+                    <tr>
+                        <td class="body2">
+                            <div style="height: 2em; width: 22em;"><img src="../content/Slider_52.avif" alt="Слайдер с делениями"></div>
+                        </td>
+						<td class="body2">Есть</td>
+                    </tr>   
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+	</main>
+</body>
+
+</html> 

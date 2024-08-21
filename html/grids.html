@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nikitina-Korkunova-Kan">
+    <title>Сетка в дизайн-системе Baggins-coffee</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li class="menu_logo" style="color: var(--white);">
+                <a href="../index.html">
+                    <h3 style="margin-bottom: 0;">Baggins coffee</h3>
+                </a>
+            </li>
+            <a href="../index.html">
+                <li class="menu_item title2">Главная</li>
+            </a>
+
+            <!--раскрывающийся пукт меню-->
+            <details class="title2" open>
+                <summary>
+                    <li class="menu_item title2">
+                        Стили
+                    </li>
+                </summary>
+                <a href="colors.html">
+                    <li class="submenu_item">Цвета</li>
+                </a>
+                <a href="font.html">
+                    <li class="submenu_item">Типографика</li>
+                </a>
+                <a href="#">
+                    <li class="submenu_item active">Сетка</li>
+                </a>
+            </details>
+
+            <details class="title2">
+                <summary>
+                    <li class="menu_item title2">
+                        Компоненты
+                    </li>
+                </summary>
+                <a href="buttons.html">
+                    <li class="submenu_item">Кнопки</li>
+                </a>
+                <a href="checkboxes.html">
+                    <li class="submenu_item">Чекбоксы</li>
+                </a>
+                <a href="inputs.html">
+                    <li class="submenu_item">Текстовые поля</li>
+                </a>
+                <a href="chips.html">
+                    <li class="submenu_item">Фишки</li>
+                </a>
+                <a href="menus.html">
+                    <li class="submenu_item">Меню</li>
+                </a>
+                <a href="progress.html">
+                    <li class="submenu_item">Прогресс</li>
+                </a>
+                <a href="switches.html">
+                    <li class="submenu_item">Свитчи</li>
+                </a>
+                <a href="sliders.html">
+                    <li class="submenu_item">Слайдер</li>
+                </a>
+                <a href="cards.html">
+                    <li class="submenu_item">Карточка</li>
+                </a>
+            </details>
+            <a href="poly.html">
+                <li class="menu_item title2">Полиграфия</li>
+            </a>
+        </ul>
+    </nav>
+
+	<main>
+		<section class="header">
+			<h1>Сетка</h1>
+		</section>
+
+        <div class="chapter">
+            <section class="text_container" style="margin-bottom: 0;">
+                <p class="body1">Корректная и&nbsp;оптимальная организация пространства ресурсов Baggins Coffee отвечает сразу трем нашим принципам: интуитивность, прозрачность и&nbsp;доступность. Для нас важно, чтобы пользователям было визуально комфортно и&nbsp;приятно работать с&nbsp;любым из&nbsp;наших ресурсов, а&nbsp;также понятно, каковы связи и&nbsp;иерархия элементов страниц.</p>
+                <p class="body1" style="margin-bottom: 0;">Ниже приведены расчеты, которые не&nbsp;только наглядно и&nbsp;в&nbsp;цифрах представляют наше видение организации и&nbsp;структурирования, но&nbsp;также экономят время при создании новых ресурсов, так как все расчеты уже выполнены.</p>
+            </section>
+        </div>
+
+		<div class="chapter">
+            <section class ="text_container">
+		    	<h2>Микромодуль</h2>
+			    <p class="body1" style="margin-bottom: 0">Микромодуль&nbsp;&mdash; образующий элемент модульной сетки любого из&nbsp;наших ресурсов. Размеры всех элементов и&nbsp;компонентов, а&nbsp;также отступы рассчитываются от&nbsp;его размеров, должны быть кратны&nbsp;им.</p>
+			</section>
+			<div class="auto_wrapper_row"><img src="../content/Grid.avif" alt=""></div>
+		</div>
+		
+		<div class="chapter" style="margin-bottom: 5em;">
+            <section class ="text_container">
+		    	<h3>Сетка</h3> 	
+		    	<p class="body1">Ниже визуальным языком представлены варианты модулей для трех наиболее распространенных разрешений экранов.</p>
+			    <p class="body1">Под контейнером мы&nbsp;подразумеваем ширину модуля без полей&nbsp;&mdash; всю область, доступную для размещения контента. Поля обозначены красным и&nbsp;представляют собой воздух&nbsp;&mdash; отступы от&nbsp;краев экрана. Колонки обозначены голубым цветом и&nbsp;помогают гармонично и&nbsp;удобно для разработчика выстроить контент.</p>
+                <p class="body1">Межколонники обозначены белым и&nbsp;представляют собой воздух (отступы) между колонками.</p>
+                <p class="body1" style="margin-bottom: 0">Все размеры ниже указаны для одного элемента (поля, колонки, межколонника) и&nbsp;строятся кратно размерам микромодуля.</p>
+		    </section>
+        </div>  
+
+		<div class="chapter chapter_img">
+            <section class ="text_container" style="margin-bottom: 0;">
+			    <p class="img_caption title2">Мобильные устройства (смартфоны) с маленьким разрешением экрана</p>
+			</section>
+			<div class="auto_wrapper_row"><img src="../content/Grid_mobile.avif" alt=""></div>
+		</div>
+
+        <div class="chapter chapter_img">
+            <section class ="text_container" style="margin-bottom: 0;">
+			    <p class="img_caption title2">Ноутбуки, мониторы старого образца</p>
+			</section>
+			<div class="auto_wrapper_row"><img src="../content/Grid_web_old.avif" alt=""></div>
+		</div>
+
+        <div class="chapter chapter_img">
+            <section class ="text_container" style="margin-bottom: 0;">
+			    <p class="img_caption title2">Ноутбуки и мониторы с большим экраном</p>
+			</section>
+			<div class="auto_wrapper_row"><img src="../content/Grid_web.avif" alt=""></div>
+		</div>
+
+	</main>
+</body>
+
+</html> 

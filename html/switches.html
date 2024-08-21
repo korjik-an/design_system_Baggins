@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nikitina-Korkunova-Kan">
+    <title>Свитчи в дизайн-системе Baggins-coffee</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li class="menu_logo" style="color: var(--white);">
+                <a href="../index.html">
+                    <h3 style="margin-bottom: 0;">Baggins coffee</h3>
+                </a>
+            </li>
+            <a href="../index.html">
+                <li class="menu_item title2">Главная</li>
+            </a>
+
+            <!--раскрывающийся пукт меню-->
+            <details class="title2">
+                <summary>
+                    <li class="menu_item title2">
+                        Стили
+                    </li>
+                </summary>
+                <a href="colors.html">
+                    <li class="submenu_item">Цвета</li>
+                </a>
+                <a href="font.html">
+                    <li class="submenu_item">Типографика</li>
+                </a>
+                <a href="grids.html">
+                    <li class="submenu_item">Сетка</li>
+                </a>
+            </details>
+
+            <details class="title2" open>
+                <summary>
+                    <li class="menu_item title2">
+                        Компоненты
+                    </li>
+                </summary>
+                <a href="buttons.html">
+                    <li class="submenu_item">Кнопки</li>
+                </a>
+                <a href="checkboxes.html">
+                    <li class="submenu_item">Чекбоксы</li>
+                </a>
+                <a href="inputs.html">
+                    <li class="submenu_item">Текстовые поля</li>
+                </a>
+                <a href="chips.html">
+                    <li class="submenu_item">Фишки</li>
+                </a>
+                <a href="menus.html">
+                    <li class="submenu_item">Меню</li>
+                </a>
+                <a href="progress.html">
+                    <li class="submenu_item">Прогресс</li>
+                </a>
+                <a href="#">
+                    <li class="submenu_item active">Свитчи</li>
+                </a>
+                <a href="sliders.html">
+                    <li class="submenu_item">Слайдер</li>
+                </a>
+                <a href="cards.html">
+                    <li class="submenu_item">Карточка</li>
+                </a>
+            </details>
+            <a href="poly.html">
+                <li class="menu_item title2">Полиграфия</li>
+            </a>
+        </ul>
+    </nav>
+
+	<main>
+		<section class="header">
+			<h1>Свитчи</h1>
+		</section>
+
+        <div class="chapter">
+            <section class="text_container" style="margin-bottom: 0;">
+                <p class="body1">Компоненты, позволяющие быстро и&nbsp;просто переключаться между двумя из&nbsp;предусмотренных состояний&nbsp;&mdash; как правило, это включить \ выключить, добавить \ убрать параметр или фильтр.</p>
+                <p class="body1" style="margin-bottom: 0;">При переключении (изменении состояния) действие происходит мгновенно, подтверждение для его совершения от&nbsp;пользователя не&nbsp;требуется. Переключение можно производить неограниченное число раз.</p>
+            </section>
+        </div>
+
+		<div class="chapter">
+            <section class ="text_container">
+		    	<h2>Анатомия</h2>
+			    <p class="body1">Свитч состоит из&nbsp;тела&nbsp;&mdash; эллипса, элемента переключения состояния&nbsp;&mdash; круга (рекомендуется всегда выполнять в&nbsp;белом цвете). Не&nbsp;допускается использование текстовых фрагментов и&nbsp;иконок в&nbsp;свитчах.</p>
+			    <p class="body1" style="margin-bottom: 0">Длина и высота свитча, размеры элемента переключения не варьируются, соответствуют значениям, обозначенным ниже. </p>
+			</section>
+			<div class="auto_wrapper_row"><img src="../content/Switches.avif" alt="Анатомия свитча. Общая высота элемента - 32px, ширина - 52px, диаметр переключателя - 16зч "></div>
+		</div>
+		
+		<div class="chapter">
+            <section class ="text_container">
+		    	<h3>Состояния</h3> 	
+		    	<p class="body1">Состояние свитча сообщает пользователю о том, применен (включен, активирован) ли данный свитч (параметр, фильтр). Предусмотрены два состояния свитча:</p>
+			    <p style="margin-bottom: 0"><ul>
+                    <li  class="body1">выключен — тело свитча окрашено в серый оттенок, элемент переключения состояния находится слева </li>
+                    <li class="body1">включен — тело свитча окрашено в акцентный цвет: основной красный, элемент переключения состояния находится справа</li>
+                </ul></p>
+		    </section>
+			<div class="auto_wrapper_row">
+                <table class="table_button">
+                <thead>
+                    <tr>
+                        <th class="body2">Выключен</th>
+                        <th class="body2">Включен</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="body2"><svg width="53" height="32" viewBox="0 0 53 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" width="52" height="32" rx="16" fill="var(--transparent-10)"/>
+                            <rect x="4.5" y="4" width="24" height="24" rx="12" fill="var(--white)"/>
+                            </svg>
+                        </td>
+						<td class="body2"><svg width="53" height="32" viewBox="0 0 53 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" width="52" height="32" rx="16" fill="var(--red)"/>
+                            <rect x="24.5" y="4" width="24" height="24" rx="12" fill="var(--white)"/>
+                            </svg>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+		<div class="chapter" style="margin-bottom: 0;">
+            <section class="text_container">
+			    <h3>Правила</h3>
+                <p class="body1"style="margin-bottom: 0;">Ниже приведены наши основные рекомендации по допустимости использования свитчей</p>
+    		</section>
+             <div class="auto_wrapper_row">
+                <figure class="card">
+                    <img src="../content/Switch_good.avif" alt="">
+                    <figcaption class="title2 good">Можно</figcaption>
+                    <p class="body1" style="margin-bottom: 0">Допускается использовать только чекбоксы в случаях, когда необходима возможность выбора нескольких элементов из предложенного набора</p>
+                </figure>
+                <figure class="card">
+                    <img src="../content/Switch_bad.avif" alt="">
+                    <figcaption class="title2 bad">Нельзя</figcaption>
+                    <p class="body1" style="margin-bottom: 0">Не&nbsp;допускается использовать свитчи и&nbsp;другие компоненты, в&nbsp;частности компоненты другой формы, в&nbsp;случаях, когда необходима возможность выбора нескольких элементов из&nbsp;предложенного набора</p>
+                </figure>
+            </div>        
+        </div>
+	</main>
+</body>
+
+</html> 

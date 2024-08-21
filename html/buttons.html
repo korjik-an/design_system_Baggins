@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nikitina-Korkunova-Kan">
+    <title>Кнопки в дизайн-системе Baggins-coffee</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li class="menu_logo" style="color: var(--white);">
+                <a href="../index.html">
+                    <h3 style="margin-bottom: 0;">Baggins coffee</h3>
+                </a>
+            </li>
+            <a href="../index.html">
+                <li class="menu_item title2">Главная</li>
+            </a>
+
+            <!--раскрывающийся пукт меню-->
+            <details class="title2">
+                <summary>
+                    <li class="menu_item title2">
+                        Стили
+                    </li>
+                </summary>
+                <a href="colors.html">
+                    <li class="submenu_item">Цвета</li>
+                </a>
+                <a href="font.html">
+                    <li class="submenu_item">Типографика</li>
+                </a>
+                <a href="grids.html">
+                    <li class="submenu_item">Сетка</li>
+                </a>
+            </details>
+
+            <details class="title2" open>
+                <summary>
+                    <li class="menu_item title2">
+                        Компоненты
+                    </li>
+                </summary>
+                <a href="#">
+                    <li class="submenu_item active">Кнопки</li>
+                </a>
+                <a href="checkboxes.html">
+                    <li class="submenu_item">Чекбоксы</li>
+                </a>
+                <a href="inputs.html">
+                    <li class="submenu_item">Текстовые поля</li>
+                </a>
+                <a href="chips.html">
+                    <li class="submenu_item">Фишки</li>
+                </a>
+                <a href="menus.html">
+                    <li class="submenu_item">Меню</li>
+                </a>
+                <a href="progress.html">
+                    <li class="submenu_item">Прогресс</li>
+                </a>
+                <a href="switches.html">
+                    <li class="submenu_item">Свитчи</li>
+                </a>
+                <a href="sliders.html">
+                    <li class="submenu_item">Слайдер</li>
+                </a>
+                <a href="cards.html">
+                    <li class="submenu_item">Карточка</li>
+                </a>
+            </details>
+            <a href="poly.html">
+                <li class="menu_item title2">Полиграфия</li>
+            </a>
+        </ul>
+    </nav>
+
+	<main>
+		<section class="header">
+			<h1>Кнопки</h1>
+		</section>
+
+        <div class="chapter">
+            <section class="text_container" style="margin-bottom: 0;">
+                <p class="body1">Компоненты, предназначенные для выполнения действия или осуществления навигации. Все кнопки должны быть согласованы между собой по&nbsp;цвету, выполнены в&nbsp;определенных размерах согласно иерархии, их&nbsp;состояние должно быть интуитивно понятно пользователям.</p>
+                <p class="body1" style="margin-bottom: 0;">Текст на&nbsp;каждой кнопке однозначно сообщает, какое действие произойдет после нажатия, а&nbsp;иконка&nbsp;&mdash; при наличии&nbsp;&mdash; согласована с&nbsp;текстом. Текстовая надпись должна быть максимально лаконичной. Текст начинается с&nbsp;заглавной буквы, все остальные буквы&nbsp;&mdash; строчные. Любые знаки пунктуации в&nbsp;текстах кнопок использовать не&nbsp;рекомендуется.</p>
+            </section>
+        </div>
+        
+        
+		<div class="chapter">
+            <section class ="text_container">
+		    	<h2>Анатомия</h2>
+			    <p class="body1">Кнопка состоит из&nbsp;тела&nbsp;&mdash; прямоугольника с&nbsp;закругленными углами&nbsp;&mdash; и&nbsp;текстовой надписи. Допускается также использование иконки, гармонирующей с&nbsp;надписью. Надпись и&nbsp;иконка размещаются на&nbsp;теле кнопки так, чтобы отступы от&nbsp;краев были равными с&nbsp;двух сторон (по&nbsp;ширине, по&nbsp;высоте). Расстояние между иконкой и&nbsp;текстом не&nbsp;зависит от&nbsp;размера кнопки, всегда составляет 8&nbsp;пикселей.</p>
+			    <p class="body1" style="margin-bottom: 0">Длина кнопки может варьироваться в&nbsp;зависимости от&nbsp;длины текстовой надписи и&nbsp;наличия иконки, однако должна всегда быть кратна размеру микромодуля (4&nbsp;пикселя). Высота кнопки не&nbsp;варьируется при изменении длины текста, соответствует значению, обозначенному в&nbsp;иерархии для кнопок данного положения.</p>
+	    	</section>
+            <div class="auto_wrapper_row"><img src="../content/Buttons.avif" alt="Анатомия кнопки. Высота - 48px, ширина зависит от размера текста внутри кнопки+боковые отступы (padding) по 56px каждый. Расстояние между иконкой и текстом - 8px.">
+            </div> 
+        </div>
+        
+		
+		<div class="chapter">
+            <section class ="text_container">
+		    	<h3>Размеры</h3> 	
+		    	<p class="body1">Кнопки могут варьироваться по&nbsp;размерам в&nbsp;зависимости от&nbsp;размера устройства, а&nbsp;также положения в&nbsp;иерархии, для каждого из&nbsp;которых ниже указаны оптимальные параметры. Не&nbsp;допускается применять для кнопок низших уровней размеры больше, чем&nbsp;те, которые указаны для стоящих выше иерархически.</p>
+                <p class="body1">Большая кнопка используется в&nbsp;десктопных версиях для привлечения внимания пользователя, побуждения его к&nbsp;выполнению данного действия. Чаще всего такой размер кнопок используется для единственного или главного действия, доступного пользователю или навигации (например, далее), бизнес-ценностей (например, купить). Рекомендуется использовать на&nbsp;странице не&nbsp;более одной кнопки данного размера.</p>
+                <p class="body1">Средняя кнопка используется наиболее часто, как в&nbsp;десктопной, так и&nbsp;в&nbsp;мобильной версиях, и&nbsp;предназначена для побуждения пользователя к&nbsp;выполнению неуникальных (неакцентных), но&nbsp;важных действий в&nbsp;рамках работы с&nbsp;ресурсом (например, в&nbsp;диалогах, попапах). В&nbsp;мобильной версии средняя кнопка может использоваться аналогично большой кнопке в&nbsp;десктопной версии.</p>
+                <p class="body1" style="margin-bottom: 0">Маленькая кнопка используется как в&nbsp;десктопной, так и&nbsp;в&nbsp;мобильной версиях для побуждения пользователя к&nbsp;выполнению действия, непосредственно связанного с&nbsp;объектом взаимодействия (например, карточкой напитка), а&nbsp;также действий, которые не&nbsp;первостепенны для решения задач покупки и&nbsp;навигации.</p>
+		    </section>
+            <div class="auto_wrapper_row">
+                <table class = "table_component table_button">
+                <thead>
+                    <tr>
+                        <th class="body2">Компонент</th>
+                        <th class="body2">Высота</th>
+                        <th class="body2">Min ширина</th>
+                        <th class="body2">Радиус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><button type = "button" class = "button_L button_fill">Button</button></td>
+                        <td class="body2">56 px</td>
+                        <td class="body2">160 px</td>
+                        <td class="body2">12 px</td>
+                    </tr>
+                    <tr>
+                        <td><button type = "button" class = "button_M button_fill">Button</button></td>
+                        <td class="body2">48 px</td>
+                        <td class="body2">140 px</td>
+                        <td class="body2">12 px</td>
+                    </tr>
+                    <tr>
+                        <td><button type = "button" class = "button_S button_fill">Button</button></td>
+                        <td class="body2">32 px</td>
+                        <td class="body2">100 px</td>
+                        <td class="body2">8 px</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+		<div class="chapter">
+                <section class="text_container">
+			    <h3>Типы</h3>
+                <p class="body1">Кнопки могут визуально варьироваться по&nbsp;цветовому оформлению и&nbsp;обводке в&nbsp;зависимости от&nbsp;выполняемого ими функционала. Рекомендуется соблюдать предложенную иерархию во&nbsp;избежание дизориентации пользователя в&nbsp;ресурсе.</p>
+                <p class="body1">Кнопки с&nbsp;заливкой цветом. Окрашены в&nbsp;акцентные цвета (рекомендуется использовать основной красный или второстепенный аква), служат для привлечения внимания и&nbsp;призыва пользователя к&nbsp;ключевым (в&nbsp;основном это бизнес-ценности) и\или первичным (например, начать) действиям на&nbsp;странице.</p>
+                <p class="body1">Кнопки с&nbsp;обводкой. Окрашены в&nbsp;белый цвет, для обводки используются акцентные цвета (рекомендуется использовать основной красный или второстепенный аква), служат для вторичных, альтернативных действий (например, назад или отмена)&nbsp;&mdash; рекомендуется располагать кнопки этого типа рядом с&nbsp;соответствующими первичными действиями.</p>
+			    <p class="body1" style="margin-bottom: 0">Кнопки с&nbsp;текстом. Нет четкого обозначения границ тела кнопки, для текста используются акцентные цвета (рекомендуется использовать основной красный или второстепенный аква). Служат для всех остальных действий, значение которых в&nbsp;данный момент и\или в&nbsp;рамках данной задачи ниже, чем у&nbsp;первичных и&nbsp;вторичных действий (например, узнать больше).</p>
+    		</section>
+            <div class="auto_wrapper_row">
+                <table class = "table_component table_button">
+                <thead>
+                    <tr>
+                        <th class="body2">Компонент</th>
+                        <th class="body2" style = "width: 38em;">Стиль</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><button type = "button" class = "button_M button_fill">Button</button></td>
+                        <td class="body2">Fil button</td>
+                    </tr>
+                    <tr>
+                        <td><button type = "button" class = "button_M button_outline">Button</button></td>
+                        <td class="body2">Outline button</td>
+                    </tr>
+                    <tr>
+                        <td><button type = "button" class = "button_M button_text">Button</button></td>
+                        <td class="body2">Text button</td>
+                    </tr>
+                </tbody>
+            </table></div>
+        </div>
+
+        <div class="chapter">
+            <section class="text_container">
+                <h3>Состояния</h3>
+                <p class="body1">Состояние кнопки сообщает пользователю ее&nbsp;статус и&nbsp;возможные варианты взаимодействия. Предусмотрены следующие состояния для каждого из&nbsp;типов кнопки:</p>
+                 <ul>
+                    <li class="body1">дефолт (Default)&nbsp;&mdash; кнопка активна, доступна к&nbsp;взаимодействию (нажатию) </li>
+                    <li class="body1">наведение (Hover)&nbsp;&mdash; кнопка интерактивна, и&nbsp;в&nbsp;данный момент курсор наведен на&nbsp;нее, или кнопка нажата</li>
+                    <li class="body1">неактивная кнопка (Disable)&nbsp;&mdash; в&nbsp;данный момент кнопка недоступна к&nbsp;взаимодействию (но&nbsp;может быть переведена в&nbsp;состояние Default позже)</li>
+                </ul>
+            </section>
+            <div class="auto_wrapper_row">
+                <table class="table_button">
+                <thead>
+                    <tr>
+                        <th class="body2">Default</th>
+                        <th class="body2">Hover</th>
+                        <th class="body2">Disable</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><button  type="button" class="button_M button_fill">Button</button></td>
+                        <td><button  type="button" class="button_M button_fill_hover">Button</button></td>
+                        <td><button  type="button" class="button_M button_fill" disabled>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td><button  type="button" class="button_M button_outline">Button</button></td>
+                        <td><button  type="button" class="button_M button_outline_hover">Button</button></td>
+                        <td><button  type="button" class="button_M button_outline" disabled>Button</button></td>
+                    </tr>
+                    <tr>
+                        <td><button  type="button" class="button_M button_text">Button</button></td>
+                        <td><button  type="button" class="button_M button_text_hover">Button</button></td>
+                        <td><button  type="button" class="button_M button_text" disabled>Button</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        
+        <div class="chapter">
+            <section class="text_container">
+                <h3>Правила</h3>
+                <p class="body1" style="margin-bottom: 0;">Ниже приведены наши основные рекомендации по&nbsp;оформлению кнопок</p>
+            </section>
+            <div class="auto_wrapper_row">
+                <figure class="card">
+                    <img src="../content/Button_left_icon.avif" alt="Кнопка с одной иконкой слева и текстом">
+                    <figcaption class="title2 good">Можно</figcaption>
+                    <p class="body1" style="margin-bottom: 0">Допускается использовать одну иконку справа от&nbsp;текстовой надписи в&nbsp;теле кнопки</p>
+                </figure>
+                <figure class="card">
+                    <img src="../content/Button_two_icons.avif" alt="Кнопка с двумя иконками и текстом">
+                    <figcaption class="title2 bad">Нельзя</figcaption>
+                    <p class="body1" style="margin-bottom: 0">Не&nbsp;допускается использование иконок без текстовой надписи в&nbsp;теле кнопки</p>
+                </figure>
+            </div>
+            <div class="auto_wrapper_row">
+                <figure class="card" style="margin-bottom: 0">
+                    <img src="../content/Button_right_icon.avif" alt="Кнопка с одной иконкой справа и текстом">
+                    <figcaption class="title2 good">Можно</figcaption>
+                    <p class="body1" style="margin-bottom: 0">Допускается использовать одну иконку слева от&nbsp;текстовой надписи в&nbsp;теле кнопки</p>
+                </figure>
+                <figure class="card" style="margin-bottom: 0">
+                    <img src="../content/Button_onlyicons.avif" alt="Кнопка с двумя иконками без текста ">
+                    <figcaption class="title2 bad">Нельзя</figcaption>
+                    <p class="body1" style="margin-bottom: 0">Не&nbsp;допускается использовать более одной иконки в&nbsp;теле кнопки</p>
+                </figure>
+            </div>
+        </div>
+	</main>
+</body>
+
+</html> 

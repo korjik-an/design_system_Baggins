@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Nikitina-Korkunova-Kan">
+    <title>Меню в дизайн-системе Baggins-coffee</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li class="menu_logo" style="color: var(--white);">
+                <a href="../index.html">
+                    <h3 style="margin-bottom: 0;">Baggins coffee</h3>
+                </a>
+            </li>
+            <a href="../index.html">
+                <li class="menu_item title2">Главная</li>
+            </a>
+
+            <!--раскрывающийся пукт меню-->
+            <details class="title2">
+                <summary>
+                    <li class="menu_item title2">
+                        Стили
+                    </li>
+                </summary>
+                <a href="colors.html">
+                    <li class="submenu_item">Цвета</li>
+                </a>
+                <a href="font.html">
+                    <li class="submenu_item">Типографика</li>
+                </a>
+                <a href="grids.html">
+                    <li class="submenu_item">Сетка</li>
+                </a>
+            </details>
+
+            <details class="title2" open>
+                <summary>
+                    <li class="menu_item title2">
+                        Компоненты
+                    </li>
+                </summary>
+                <a href="buttons.html">
+                    <li class="submenu_item">Кнопки</li>
+                </a>
+                <a href="checkboxes.html">
+                    <li class="submenu_item">Чекбоксы</li>
+                </a>
+                <a href="inputs.html">
+                    <li class="submenu_item">Текстовые поля</li>
+                </a>
+                <a href="chips.html">
+                    <li class="submenu_item">Фишки</li>
+                </a>
+                <a href="#">
+                    <li class="submenu_item active">Меню</li>
+                </a>
+                <a href="progress.html">
+                    <li class="submenu_item">Прогресс</li>
+                </a>
+                <a href="switches.html">
+                    <li class="submenu_item">Свитчи</li>
+                </a>
+                <a href="sliders.html">
+                    <li class="submenu_item">Слайдер</li>
+                </a>
+                <a href="cards.html">
+                    <li class="submenu_item">Карточка</li>
+                </a>
+            </details>
+            <a href="poly.html">
+                <li class="menu_item title2">Полиграфия</li>
+            </a>
+        </ul>
+    </nav>
+
+	<main>
+		<section class="header">
+			<h1>Меню</h1>
+		</section>
+
+        <div class="chapter">
+            <section class="text_container" style="margin-bottom: 0;">
+                <p class="body1">Компоненты, предназначенные для выбора одной категории (варианта) из&nbsp;уже созданного списка. Функционал меню строится по&nbsp;одному из&nbsp;2&nbsp;механизмов:</p>
+                <ul>
+                    <li class="body1">закрытый выбор (список вариантов без возможности поиска в&nbsp;поле)</li>
+                    <li class="body1">выбор с&nbsp;поиском (в&nbsp;поле можно вводить текст)</li>
+                </ul>
+                <p class="body1">В&nbsp;нераскрытом состоянии меню визуально похожи на&nbsp;текстовые поля ввода и&nbsp;согласуются с&nbsp;ними по&nbsp;оформлению. Визуальная разница заключается в&nbsp;наличии в&nbsp;поле стрелки&nbsp;&mdash; она дает пользователю понять, что предусмотрена возможность выбора. Стрелка меняет ориентацию на&nbsp;180 градусов в&nbsp;зависимости от&nbsp;действия, которое в&nbsp;данный момент можно совершить со&nbsp;списком вариантов: развернуть или свернуть.</p>
+                <p class="body1">В&nbsp;раскрытом состоянии меню визуально представляет собой текстовое поле ввода и&nbsp;расположенный под ним набор (список) текстовых полей (вариантов), размещенных вертикально друг за&nbsp;другом. Также присутствует элемент пролистывания (прокрутки) с&nbsp;правой стороны меню.</p>
+                <p class="body1">Вне зависимости от состояния (заполненности), текстовое поле однозначно сигнализирует о том, для заполнения какой информации оно предназначено — заголовок поля виден пользователю всегда. </p>
+            </section>
+        </div>
+
+		<div class="chapter">
+            <section class ="text_container">
+		    	<h2>Анатомия</h2>
+			    <p class="body1">Меню состоит из&nbsp;тела&nbsp;&mdash; прямоугольника с&nbsp;закругленными краями, в&nbsp;котором расположены составляющие&nbsp;&mdash; прямоугольники с&nbsp;острыми углами, высота которых 24&nbsp;пикселя, а&nbsp;ширина совпадает с&nbsp;шириной тела. В&nbsp;состав меню также входит индикатор пролистывания&nbsp;&mdash; вертикальная линия серого оттенка из&nbsp;монохромной палитры дизайн системы с&nbsp;закругленными краями, который перемещается по&nbsp;вертикали при пролистывании составляющих (вариантов). По&nbsp;обеим сторонам от&nbsp;индикатора пролистывания, а&nbsp;также слева в&nbsp;каждой составляющей предусмотрены отступы по&nbsp;16&nbsp;пикселей каждый. Сверху и&nbsp;снизу тела меню предусмотрены отступы по&nbsp;4&nbsp;пикселя.</p>
+			    <p class="body1">Составляющие меню включают в&nbsp;себя текстовый заголовок, расположенный с&nbsp;левого края (с&nbsp;учетом отступа). В&nbsp;невыбранном состоянии составляющая окрашена в&nbsp;белый, в&nbsp;выбранном&nbsp;&mdash; в&nbsp;светлый оттенок серого из&nbsp;монохромной палитры дизайн системы (в&nbsp;сравнении с&nbsp;индикатором пролистывания).</p>
+                <p class="body1" style="margin-bottom: 0">Допускается использование одной или двух иконок в&nbsp;составляющих меню. При использовании одной иконки она располагается с&nbsp;левого края (с&nbsp;учетом отступа), расстояние между иконкой и&nbsp;текстом не&nbsp;зависит от&nbsp;размера поля, всегда составляет 8&nbsp;пикселей. При использовании двух иконок вторая размещается с&nbsp;правого края составляющей (с&nbsp;учетом отступа).</p>
+			</section>
+			<div class="auto_wrapper_row"><img class="chapter_img" src="../content/Menu.avif" alt=""></div>
+		</div>
+
+        <div class="chapter">
+            <section class ="text_container">
+		    	<h2>Каскадное меню</h2>
+			    <p class="body1" style="margin-bottom: 0">Представляет собой вложенное меню&nbsp;&mdash; для одного или нескольких вариантов (категорий) доступен дальнейший выбор из&nbsp;другого списка. О&nbsp;возможности такого выбора сигнализирует стрелка с&nbsp;правого края составляющей (категории) в&nbsp;рамках которой&nbsp;он (выбор) далее осуществляется. В&nbsp;остальном визуальное оформление и&nbsp;анатомия каскадного меню аналогичны обычному меню.</p>
+			</section>
+			<div class="auto_wrapper_row"><img class="chapter_img" src="../content/Menu_cascade.avif" alt=""></div>
+		</div>
+
+        <div class="chapter">
+            <section class ="text_container">
+		    	<h2>Пример</h2>
+			    <p class="body1" style="margin-bottom: 0">Ниже представлен пример меню с&nbsp;возможностью поиска (ввода текста) в&nbsp;текстовом поле. Меню раскрыто, поиск в&nbsp;процессе, его текущие результаты показаны пользователю.</p>
+			</section>
+			<div class="auto_wrapper_row"><img class="chapter_img" src="../content/Menu_example.avif" alt=""></div>
+		</div>
+		
+        
+	</main>
+</body>
+
+</html> 
